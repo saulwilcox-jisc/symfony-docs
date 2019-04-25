@@ -6,12 +6,12 @@ How to Customize Error Pages
 ============================
 
 In Symfony applications, all errors are treated as exceptions, no matter if they
-are just a 404 Not Found error or a fatal error triggered by throwing some
-exception in your code.
+are just a 404 Not Found error or a fatal error triggered when an exception is thrown
+in your site code.
 
 If your app has the `TwigBundle`_ installed, a special controller handles these
-exceptions. This controller displays debug information for errors and allows to
-customize error pages, so run this command to make sure the bundle is installed:
+exceptions. This controller displays debug information for errors and allows
+customization of error pages. Run the following command to check the bundle is installed:
 
 .. code-block:: terminal
 
@@ -107,7 +107,7 @@ To override the 404 error template for HTML pages, create a new
         <h1>Page not found</h1>
 
         <p>
-            The requested page couldn't be located. Checkout for any URL
+            The requested page couldn't be located. Check for any URL
             misspelling or <a href="{{ path('homepage') }}">return to the homepage</a>.
         </p>
     {% endblock %}
